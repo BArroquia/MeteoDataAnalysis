@@ -1,6 +1,5 @@
 """
 Author: Benjamin Arroquia Cuadros
-01/11/2022
 
 Module to clip and extract statistics from raster file.
 Dependencies: osgeo, numpy, pandas
@@ -22,8 +21,6 @@ Workflow of data processing:
     4.6 Create gtiff of doas
 5. Process data: copernicus variables
 6. Copy file and 
-
-
 
 ProvPolygons transform coordinates into Lambert Conical,
 

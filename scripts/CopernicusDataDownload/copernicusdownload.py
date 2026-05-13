@@ -1,6 +1,5 @@
 """
 Author: Benjamin Arroquia Cuadros
-01/11/2022
 
 Module to clip and extract statistics from raster file.
 Dependencies: osgeo, numpy, pandas
@@ -613,7 +612,12 @@ class RasterExtraction:
     
     def get_stats_provinces(self, layer_prov):
         """
-        Loop over bands and create a lis of zonal statistics
+        Loop
+Module to clip and extract statistics from raster file.
+Dependencies: osgeo, numpy, pandas
+
+Script workflow:
+1. Download data ever over bands and create a lis of zonal statistics
         """
         ls_rows = []
         for i in range(1, self.number_bands+1):

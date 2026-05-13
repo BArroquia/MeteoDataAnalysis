@@ -1,20 +1,33 @@
 """
-Ejecutar en docker.
+Project Workflow: Execution in Docker
 
-1. lee fichero de localizaciones capa tipo punto LAYER_LOCATIONS.
-2. Transforma coordenadas a lambert conica.
-3. Lee todos los grib en la carpeta GRIB_COPERNICUS.
-4. Extrae los valores de cada punto y guarda en DB_COPERNICUS_OUT.
+    Read the point-layer locations file: LAYER_LOCATIONS.
 
-# Uso de docker para procesamiento de datos, ejecución en terminal
-# No se puede instalar pyproj por error en la db de la librería
-# No se puede instalar pandas por versiones de numpy
+    Transform coordinates to Lambert Conformal Conic.
 
-- Acceso al contenedor con bash
-docker run --rm -it --name gdalscripts -v "$(pwd):/app" -w /app osgeo/gdal:ubuntu-full-3.6.3 sh
+    Read all GRIB files in the GRIB_COPERNICUS folder.
 
-- Ejecución de script
-docker run --rm -it --name gdalscripts -v "$(pwd):/app" -w /app osgeo/gdal:ubuntu-full-3.6.3 python scripts/CopernicusDataDownload/extrae_meteovalores.py
+    Extract the values for each point and save them to DB_COPERNICUS_OUT.
+
+Technical Constraints & Environment
+
+        Execution: Data processing via Docker (terminal execution).
+
+        Issue: pyproj cannot be installed due to a library database error.
+
+        Issue: pandas cannot be installed due to numpy version conflicts.
+
+Docker Commands
+
+    Access the container via Bash:
+    Bash
+
+    docker run --rm -it --name gdalscripts -v "$(pwd):/app" -w /app osgeo/gdal:ubuntu-full-3.6.3 sh
+
+    Run the script:
+    Bash
+
+    docker run --rm -it --name gdalscripts -v "$(pwd):/app" -w /app osgeo/gdal:ubuntu-full-3.6.3 python scripts/CopernicusDataDownload/extrae_meteovalores.py
 """
 
 from osgeo import gdal, ogr, osr

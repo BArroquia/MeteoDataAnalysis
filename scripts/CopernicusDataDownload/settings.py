@@ -1,7 +1,8 @@
 """
+Author: Benjamin Arroquia Cuadros
 Project: Calculate data from copernicus
 Path and global variables
-'/mnt/Datos/phd/2025_python/data/interim/municipios_geobiomet.gpkg'
+'./data/interim/municipios_geobiomet.gpkg'
 """
 import pathlib
 import os

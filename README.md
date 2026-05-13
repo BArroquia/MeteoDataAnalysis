@@ -1,3 +1,5 @@
 # Meteorological data analysis workflow for DOA research
 
-1. 
+1. Download data from Copernicus
+2. Transform and create DOA
+3. Select specific locations for statistical analysis.

@@ -1,4 +1,7 @@
-
+"""
+Author: Benjamin Arroquia Cuadros
+Download data from copernicus CDS
+"""
 
 import cdsapi
 import os
